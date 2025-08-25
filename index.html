@@ -3,483 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khalid Rind | NeuraNest AI Agency - Premier AI Consultant & Digital Transformation Expert</title>
-    <meta name="description" content="Portfolio of Khalid Rind, Lead AI Consultant at NeuraNest AI Agency in Melbourne. Specializing in AI automation, digital transformation, high-converting websites, and strategic content creation.">
-    <meta name="keywords" content="AI Consultant, Digital Transformation, Khalid Rind, NeuraNest AI, Melbourne, AI Automation, Web Development, E-commerce Growth, Content Strategy">
+    <title>Khalid Rind | NeuraNest AI - Neural AI Architect & Digital Mastermind</title>
+    <meta name="description" content="Khalid Rind - Neural AI Architect at NeuraNest AI Agency. Advanced neural AI automation, digital transformation, and intelligent solutions for Melbourne businesses.">
+    <meta name="keywords" content="Neural AI, AI Architect, Khalid Rind, NeuraNest, Melbourne, AI Automation, Neural Networks, Digital Transformation">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #007BFF;
-            --secondary: #00D4AA;
-            --accent: #FF6B35;
-            --dark-bg: #0A0A10;
-            --dark-surface: #12121A;
-            --text-primary: #FFFFFF;
-            --text-secondary: #A0A0B0;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            --shadow-glow: 0 0 30px rgba(0, 123, 255, 0.3);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  <style>
+    :root { 
+        --primary: #0066ff; --secondary: #00d4aa; --accent: #ff6b35; --neural-green: #00ffaa; --neural-cyan: #00aaff; --neural-purple: #aa00ff;
+        --dark-bg: #0a0a10; --dark-surface: #12121a; --text-primary: #ffffff; --text-secondary: #a0a0b0;
+        --border-color: rgba(255, 255, 255, 0.1); --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        --gradient-neural: linear-gradient(135deg, var(--neural-green) 0%, var(--neural-cyan) 50%, var(--neural-purple) 100%);
+        --shadow-glow: 0 0 35px rgba(0, 123, 255, 0.35); --shadow-neural: 0 0 30px rgba(0, 255, 170, 0.3);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: var(--dark-bg); color: var(--text-primary); line-height: 1.7; overflow-x: hidden; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 
-        /* --- Header & Navigation --- */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(10, 10, 16, 0.8);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--text-primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
-        .logo span { color: var(--primary); }
-        nav ul { display: flex; list-style: none; gap: 2.5rem; }
-        nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
-        nav a:hover, nav a.active { color: var(--primary); }
-        .mobile-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+    /* Neural Background */
+    .neural-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 80%, rgba(0, 255, 170, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(0, 170, 255, 0.1) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(170, 0, 255, 0.05) 0%, transparent 50%); z-index: -2; }
+    .neural-circuits { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(90deg, transparent 98%, rgba(0, 255, 170, 0.03) 100%), linear-gradient(0deg, transparent 98%, rgba(0, 170, 255, 0.03) 100%); background-size: 100px 100px; z-index: -1; animation: circuitFlow 20s linear infinite; }
+    @keyframes circuitFlow { 0% { transform: translate(0, 0); } 100% { transform: translate(100px, 100px); } }
 
-        /* --- Hero Section --- */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 70px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 3rem;
-            position: relative;
-            z-index: 2;
-        }
-        .hero-text .badge { display: inline-block; padding: 0.5rem 1rem; border: 1px solid var(--primary); color: var(--primary); border-radius: 50px; font-size: 0.9rem; margin-bottom: 1rem; }
-        .hero-text h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; font-weight: 700; margin-bottom: 1.5rem; }
-        .hero-text h1 span { color: var(--secondary); }
-        .hero-text p.subtitle { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 500px; }
-        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 2rem; border: none; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-        .btn-primary { background: var(--gradient-primary); color: var(--white); }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-glow); }
-        .quantum-orb-container { display: flex; justify-content: center; align-items: center; }
+    /* Header & Navigation */
+    header { position: fixed; top: 0; left: 0; right: 0; background: rgba(10, 10, 10, 0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border-color); z-index: 1000; transition: all 0.3s ease; }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 1rem 2rem; max-width: 1400px; margin: 0 auto; }
+    .logo { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--neural-green); text-decoration: none; display: flex; align-items: center; gap: 0.75rem; text-shadow: 0 0 20px rgba(0, 255, 170, 0.5); letter-spacing: -0.02em; }
+    .logo-icon { width: 45px; height: 45px; background: var(--gradient-neural); border-radius: 50%; display: flex; align-items: center; justify-content: center; animation: neuralPulse 2s ease-in-out infinite; box-shadow: 0 0 25px rgba(0, 255, 170, 0.4); }
+    .logo-icon::before { content: '🦠'; font-size: 22px; filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.8)); }
+    @keyframes neuralPulse { 0%, 100% { box-shadow: 0 0 25px rgba(0, 255, 170, 0.4); transform: scale(1); } 50% { box-shadow: 0 0 40px rgba(0, 255, 170, 0.7); transform: scale(1.05); } }
+    nav ul { display: flex; list-style: none; gap: 2.5rem; }
+    nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; transition: all 0.3s ease; position: relative; }
+    nav a:hover, nav a.active { color: var(--neural-green); text-shadow: 0 0 10px rgba(0, 255, 170, 0.5); }
 
-        /* --- Stats Section --- */
-        .stats { padding: 3rem 0; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; background: var(--dark-surface); padding: 2rem; border-radius: 12px; }
-        .stat-item { text-align: center; }
-        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--primary); font-family: 'Space Grotesk', sans-serif; }
-        .stat-label { color: var(--text-secondary); font-size: 0.9rem; }
-        
-        /* --- General Section Styling --- */
-        section { padding: 6rem 0; }
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-badge { display: inline-block; background-color: rgba(0, 123, 255, 0.1); color: var(--primary); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; }
-        .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 1rem; }
-        .section-subtitle { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
-        
-        /* --- About Section --- */
-        .about { background: var(--dark-surface); }
-        .about-content { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; }
-        .profile-card { background: var(--gradient-primary); padding: 2.5rem; border-radius: 20px; text-align: center; }
-        .profile-image { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--dark-bg); margin: 0 auto 1.5rem; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: var(--primary); }
-        .profile-name { font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem; }
-        .profile-title { font-size: 1rem; color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; }
-        .btn-linkedin { background-color: #0A66C2; color: #fff; padding: 0.8rem 1.5rem; }
-        .about-text h3 { font-size: 1.8rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; }
-        .about-text p { color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .expertise-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; list-style: none; }
-        .expertise-list li { display: flex; align-items: center; gap: 0.5rem; }
-        .expertise-list i { color: var(--secondary); }
+    /* Hero Section */
+    .hero { min-height: 100vh; display: flex; align-items: center; position: relative; background: radial-gradient(ellipse at center, rgba(0, 255, 170, 0.12) 0%, transparent 70%), radial-gradient(ellipse at 80% 20%, rgba(0, 170, 255, 0.08) 0%, transparent 50%); }
+    .hero-content { position: relative; z-index: 2; text-align: center; max-width: 1100px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(0, 255, 170, 0.12); border: 1px solid rgba(0, 255, 170, 0.3); padding: 1rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600; color: var(--neural-green); margin-bottom: 2.5rem; backdrop-filter: blur(15px); }
+    .hero h1 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(4rem, 12vw, 8rem); font-weight: 800; line-height: 1.05; margin-bottom: 2rem; background: var(--gradient-neural); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em; }
+    .hero .subtitle { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 3.5rem; max-width: 750px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .btn { display: inline-flex; align-items: center; gap: 1rem; padding: 1.5rem 3rem; border: none; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all 0.4s ease; cursor: pointer; font-size: 1.2rem; }
+    .btn-primary { background: var(--gradient-neural); color: var(--dark-bg); box-shadow: var(--shadow-neural); }
+    .btn-primary:hover { transform: translateY(-4px); box-shadow: 0 0 60px rgba(0, 255, 170, 0.6); }
 
-        /* --- Services Section --- */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        .service-card { background: var(--dark-surface); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 12px; transition: all 0.3s ease; }
-        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-glow); border-color: var(--primary); }
-        .service-icon { font-size: 2.5rem; color: var(--primary); margin-bottom: 1.5rem; }
-        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-        .service-card p { color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .service-features { list-style: none; }
-        .service-features li { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; font-size: 0.9rem; }
-        .service-features i { color: var(--secondary); font-size: 0.8rem; }
-        
-        /* --- Portfolio Section --- */
-        .portfolio { background: var(--dark-surface); }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .portfolio-card { background: var(--dark-surface); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; }
-        .portfolio-card:hover { transform: translateY(-5px); }
-        .portfolio-image { height: 220px; background: var(--gradient-primary); display: flex; justify-content: center; align-items: center; font-size: 3rem; }
-        .portfolio-content { padding: 2rem; }
-        .portfolio-tag { display: inline-block; background-color: rgba(0, 212, 170, 0.1); color: var(--secondary); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.8rem; margin-bottom: 1rem; }
-        .portfolio-card h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
-        .portfolio-card p { color: var(--text-secondary); }
+    /* Stats Section */
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; margin-top: 5rem; padding: 3rem 0; }
+    .stat-item { text-align: center; padding: 2.5rem; border-radius: 25px; background: rgba(0, 255, 170, 0.05); border: 1px solid rgba(0, 255, 170, 0.15); transition: all 0.4s ease; backdrop-filter: blur(15px); }
+    .stat-item:hover { transform: translateY(-10px); background: rgba(0, 255, 170, 0.12); box-shadow: var(--shadow-neural); border-color: rgba(0, 255, 170, 0.4); }
+    .stat-number { font-size: 3.5rem; font-weight: 800; background: var(--gradient-neural); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; }
+    .stat-label { color: var(--text-secondary); font-weight: 500; font-size: 1.1rem; }
 
-        /* --- CTA Section --- */
-        .cta { padding: 6rem 0; }
-        .cta-content { background: var(--gradient-primary); padding: 4rem; border-radius: 20px; text-align: center; }
-        .cta-content h2 { font-size: 2.5rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; }
-        .cta-content p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; opacity: 0.9; }
-        .btn-accent { background: var(--accent); color: #fff; }
-        .btn-accent:hover { background: #E55B2A; transform: translateY(-3px); }
+    /* Section Styling */
+    section { padding: 10rem 0; }
+    .section-header { text-align: center; margin-bottom: 5rem; }
+    .section-badge { display: inline-block; background: rgba(0, 255, 170, 0.12); color: var(--neural-green); padding: 1rem 2rem; border-radius: 50px; font-size: 1rem; font-weight: 600; margin-bottom: 2rem; border: 1px solid rgba(0, 255, 170, 0.25); backdrop-filter: blur(15px); }
+    .section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(3rem, 8vw, 5rem); font-weight: 700; margin-bottom: 2rem; background: var(--gradient-neural); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .section-subtitle { font-size: 1.4rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.6; }
 
-        /* --- Footer --- */
-        footer { background: #000; padding: 4rem 0 2rem; }
-        .footer-content { text-align: center; }
-        .footer-logo { font-size: 2rem; font-family: 'Space Grotesk', sans-serif; margin-bottom: 1rem; }
-        .footer-links { list-style: none; display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
-        .social-links { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
-        .social-links a { color: var(--text-secondary); font-size: 1.5rem; transition: color 0.3s ease; }
-        .social-links a:hover { color: var(--primary); }
-        .footer-bottom { border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem; }
-        
-        /* --- Responsive Design --- */
-        @media (max-width: 992px) {
-            .hero-content { grid-template-columns: 1fr; text-align: center; }
-            .hero-text p.subtitle { margin: 0 auto 2rem; }
-            .quantum-orb-container { margin-top: 3rem; }
-            .about-content { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-            section { padding: 4rem 0; }
-            .mobile-toggle { display: block; }
-            nav ul { display: none; position: absolute; top: 70px; left: 0; width: 100%; background: var(--dark-bg); flex-direction: column; text-align: center; padding: 2rem 0; gap: 1.5rem; }
-            nav ul.active { display: flex; }
-            .expertise-list { grid-template-columns: 1fr; }
-        }
+    /* About Section */
+    .about { background: linear-gradient(180deg, var(--dark-bg) 0%, rgba(26, 29, 35, 0.8) 100%); }
+    .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .profile-card { background: var(--gradient-neural); padding: 4rem; border-radius: 35px; text-align: center; position: relative; overflow: hidden; box-shadow: var(--shadow-neural); }
+    .profile-image { width: 200px; height: 200px; border-radius: 50%; margin: 0 auto 2.5rem; background: rgba(10, 10, 10, 0.8); display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; z-index: 2; border: 3px solid rgba(255, 255, 255, 0.25); }
+    .profile-name { font-size: 2.2rem; font-weight: 700; margin-bottom: 0.8rem; z-index: 2; color: var(--dark-bg); }
+    .about-text h3 { color: var(--neural-green); font-size: 2rem; text-shadow: 0 0 15px rgba(0, 255, 170, 0.3); }
 
-    </style>
+    /* Contact Section */
+    .contact { background: radial-gradient(ellipse at center, rgba(0, 255, 170, 0.08) 0%, var(--dark-bg) 70%); }
+    .contact-content { max-width: 1000px; margin: 0 auto; text-align: center; }
+
+    /* Footer */
+    footer { background: var(--dark-bg); padding: 5rem 0 2rem; border-top: 1px solid rgba(0, 255, 170, 0.15); }
+    .footer-content { text-align: center; }
+    .social-links { display: flex; justify-content: center; gap: 2rem; margin: 1.5rem 0; }
+    .social-link { color: var(--neural-green); font-size: 1.5rem; transition: all 0.3s ease; }
+    .social-link:hover { transform: translateY(-8px); text-shadow: 0 0 15px rgba(0, 255, 170, 0.5); }
+
+    /* Responsive */
+    @media (max-width: 992px) { .about-content { grid-template-columns: 1fr; gap: 3rem; } .hero-content { max-width: 900px; } }
+    @media (max-width: 768px) { section { padding: 4rem 0; } .hero h1 { font-size: clamp(2.5rem, 10vw, 5rem); } .hero .subtitle { font-size: 1.2rem; } .stats { grid-template-columns: repeat(2, 1fr); } }
+  </style>
 </head>
 <body>
+    <!-- Neural Background -->
+    <div class="neural-bg"></div>
+    <div class="neural-circuits"></div>
 
     <header>
         <div class="container">
             <div class="nav-container">
-                <a href="#home" class="logo">NeuraNest<span>.AI</span></a>
+                <a href="#home" class="logo">
+                    <div class="logo-icon"></div>
+                    NEURANEST
+                </a>
                 <nav>
-                    <ul id="navMenu">
+                    <ul>
                         <li><a href="#home" class="active">Home</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="mobile-toggle" id="mobileToggle">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text" data-aos="fade-right">
-                        <div class="badge">AI Consultant & Digital Transformation Expert</div>
-                        <h1>Khalid Rind<br>The Digital <span>Orchestrator</span></h1>
-                        <p class="subtitle">Empowering Melbourne businesses with cutting-edge AI automation, strategic digital marketing, and compelling content creation.</p>
-                        <a href="#contact" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Your Transformation</a>
-                    </div>
-                    <div class="quantum-orb-container" data-aos="fade-left">
-                        <svg id="quantumOrb" width="100%" height="100%" viewBox="0 0 400 400">
-                           <defs>
-                                <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                    <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
-                                    <stop offset="100%" style="stop-color:rgb(0,212,170);stop-opacity:1" />
-                                </radialGradient>
-                                <filter id="glow">
-                                    <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
-                                    <feMerge>
-                                        <feMergeNode in="coloredBlur"/>
-                                        <feMergeNode in="SourceGraphic"/>
-                                    </feMerge>
-                                </filter>
-                            </defs>
-                            <circle cx="200" cy="200" r="40" fill="url(#coreGlow)" filter="url(#glow)" />
-                            <ellipse cx="200" cy="200" rx="150" ry="60" stroke="#007BFF" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate1 10s linear infinite;" />
-                            <ellipse cx="200" cy="200" rx="120" ry="120" stroke="#00D4AA" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate2 12s linear infinite;" />
-                            <ellipse cx="200" cy="200" rx="80" ry="180" stroke="#FF6B35" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate3 15s ease-in-out infinite;" />
-                            <ellipse cx="200" cy="200" rx="180" ry="80" stroke="#FFFFFF" fill="none" stroke-width="1" style="transform-origin: center; animation: rotate4 18s ease-in-out infinite;" />
-                            <style>
-                                @keyframes rotate1 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-                                @keyframes rotate2 { from { transform: rotate(0deg) scaleX(1); } to { transform: rotate(-360deg) scaleX(1); } }
-                                @keyframes rotate3 { 0%, 100% { rx: 80; ry: 180; transform: rotate(0deg); } 50% { rx: 180; ry: 80; transform: rotate(180deg); } }
-                                @keyframes rotate4 { 0%, 100% { rx: 180; ry: 80; transform: rotate(360deg); } 50% { rx: 80; ry: 180; transform: rotate(180deg); } }
-                            </style>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid" data-aos="fade-up">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">Client Satisfaction</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">6+</div>
-                        <div class="stat-label">Years of Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Industries Served</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                 <div class="section-header" data-aos="fade-up">
-                    <div class="section-badge">About Me</div>
-                    <h2 class="section-title">Architect of AI-Powered Growth</h2>
-                    <p class="section-subtitle">Fusing human-centric strategy with intelligent technology to build the future of business.</p>
-                </div>
-                <div class="about-content">
-                    <div class="profile-card" data-aos="fade-right">
-                        <div class="profile-image">👨‍💻</div>
-                        <h3 class="profile-name">Khalid Rind</h3>
-                        <p class="profile-title">Lead AI Consultant, NeuraNest AI Agency</p>
-                        <a href="https://www.linkedin.com/in/khalidrind" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i> Connect</a>
-                    </div>
-                    <div class="about-text" data-aos="fade-left">
-                        <h3>My Mission: To Empower Your Digital Future.</h3>
-                        <p>I am a dedicated AI Consultant at NeuraNest AI Agency, Melbourne's nexus for comprehensive AI and digital solutions. My core mission is to empower businesses—from ambitious startups to established brands—to thrive in the digital era. I achieve this by seamlessly integrating cutting-edge AI automation, data-driven digital marketing, and compelling content creation.</p>
-                        <p>Leveraging a team of advanced AI agents as my digital co-creators, I specialize in architecting and deploying custom solutions that don't just solve problems, but unlock new avenues for growth and efficiency.</p>
-                        <ul class="expertise-list">
-                            <li><i class="fas fa-check-circle"></i> AI Automation</li>
-                            <li><i class="fas fa-check-circle"></i> Web Development</li>
-                            <li><i class="fas fa-check-circle"></i> Content Strategy</li>
-                            <li><i class="fas fa-check-circle"></i> Digital Marketing</li>
-                            <li><i class="fas fa-check-circle"></i> E-commerce Mastery</li>
-                            <li><i class="fas fa-check-circle"></i> Google Business Suite</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-badge">Core Services</div>
-                    <h2 class="section-title">My AI & Digital Toolkit</h2>
-                    <p class="section-subtitle">A comprehensive suite of services designed to build, automate, and grow your business with intelligence.</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon"><i class="fas fa-robot"></i></div>
-                        <h3>AI Automation & Custom Apps</h3>
-                        <p>Streamline operations, build bespoke tools, and deploy intelligent chatbots for unparalleled efficiency.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-angle-right"></i> Custom AI Agent Development</li>
-                            <li><i class="fas fa-angle-right"></i> Business Process Automation</li>
-                            <li><i class="fas fa-angle-right"></i> Intelligent Chatbot Integration</li>
-                        </ul>
-                    </div>
-                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon"><i class="fas fa-desktop"></i></div>
-                        <h3>Web Development & Digital Presence</h3>
-                        <p>Develop high-converting websites and landing pages optimized for performance and visibility.</p>
-                        <ul class="service-features">
-                            <li><i class="fas fa-angle-right"></i> High-Converting Websites</li>
-                            <li><i class="fas fa-angle-right"></i> Google Business Integration</li>
-                            <li><i class="fas fa-angle-right"></i> SEO & Performance Analytics</li>
-                        </ul>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon"><i class="fas fa-pen-ruler"></i></div>
-                        <h3>Content Creation & Strategy</h3>
-                        <p>Craft engaging video, graphic, and written content for powerful branding and social media dominance.</p>
-                         <ul class="service-features">
-                            <li><i class="fas fa-angle-right"></i> Video Production & Editing</li>
-                            <li><i class="fas fa-angle-right"></i> Graphic Design & Branding</li>
-                            <li><i class="fas fa-angle-right"></i> Social Media Management</li>
-                        </ul>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                        <h3>Omnichannel Digital Marketing</h3>
-                        <p>Navigate the digital landscape with expert campaigns across all major platforms for maximum reach.</p>
-                        <ul class="service-features">
-                           <li><i class="fas fa-angle-right"></i> Multi-Platform Ad Campaigns</li>
-                            <li><i class="fas fa-angle-right"></i> PPC & Social Media Advertising</li>
-                            <li><i class="fas fa-angle-right"></i> Analytics & Performance Tracking</li>
-                        </ul>
-                    </div>
-                     <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
-                        <h3>E-commerce Platform Mastery</h3>
-                        <p>Drive sales and visibility across Shopify, Amazon, and Etsy with advanced strategies and optimization.</p>
-                        <ul class="service-features">
-                           <li><i class="fas fa-angle-right"></i> Platform Optimization</li>
-                            <li><i class="fas fa-angle-right"></i> Sales Funnel Development</li>
-                            <li><i class="fas fa-angle-right"></i> Customer Journey Mapping</li>
-                        </ul>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                        <div class="service-icon"><i class="fas fa-at"></i></div>
-                        <h3>Advanced Email & Affiliate Marketing</h3>
-                        <p>Design automated, high-ROI email strategies, lead nurturing funnels, and lucrative affiliate programs.</p>
-                        <ul class="service-features">
-                           <li><i class="fas fa-angle-right"></i> Automated Email Sequences</li>
-                            <li><i class="fas fa-angle-right"></i> Lead Generation & Nurturing</li>
-                            <li><i class="fas fa-angle-right"></i> Affiliate Program Management</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="portfolio" class="portfolio">
-             <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <div class="section-badge">Featured Work</div>
-                    <h2 class="section-title">My Portfolio of Innovation</h2>
-                    <p class="section-subtitle">A showcase of tangible results and cutting-edge solutions delivered across diverse industries.</p>
-                </div>
-                <div class="portfolio-grid">
-                    <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="portfolio-image"><i class="fas fa-building"></i></div>
-                        <div class="portfolio-content">
-                            <span class="portfolio-tag">Real Estate Tech</span>
-                            <h3>M&N Accommodation Platform</h3>
-                            <p>A full-scale property management system with advanced booking and Google Business integration.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="portfolio-image"><i class="fas fa-cogs"></i></div>
-                        <div class="portfolio-content">
-                             <span class="portfolio-tag">AI Development</span>
-                            <h3>Google AI Studio Integrations</h3>
-                            <p>Advanced AI workflows for automated content generation and intelligent business processing.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="portfolio-image"><i class="fas fa-video"></i></div>
-                        <div class="portfolio-content">
-                             <span class="portfolio-tag">Content Creation</span>
-                            <h3>Educational Video Suite</h3>
-                            <p>Professional video production, including educational modules and brand explainer concepts.</p>
-                        </div>
-                    </div>
-                    <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="portfolio-image"><i class="fas fa-file-alt"></i></div>
-                        <div class="portfolio-content">
-                             <span class="portfolio-tag">Web Development</span>
-                            <h3>Multi-Industry Landing Pages</h3>
-                            <p>A collection of 30+ high-converting, responsive landing pages designed for various sectors.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="cta">
-            <div class="container">
-                <div class="cta-content" data-aos="fade-up">
-                    <h2>Ready to Build Your Digital Legacy?</h2>
-                    <p>Let's connect. I offer a complimentary consultation to discuss how we can architect an intelligent, AI-powered future for your business.</p>
-                    <a href="mailto:contact@neurane-ai.agency" class="btn btn-accent"><i class="fas fa-envelope"></i> Get a Free Consultation</a>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    
-    <footer>
+    <section id="home" class="hero">
         <div class="container">
-            <div class="footer-content">
-                <a href="#home" class="logo footer-logo">NeuraNest<span>.AI</span></a>
-                 <ul class="footer-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                </ul>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/khalidrind" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <!-- Add other social links as needed -->
+            <div class="hero-content" data-aos="fade-up">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    Neural AI Consultant & Digital Transformation Expert
+                </div>
+                <h1>KHALID RIND<br><NEURAMASTER</h1>
+                <p class="subtitle">
+                    Empowering businesses with cutting-edge neural AI automation, strategic digital marketing, 
+                    and compelling content creation. Melbourne's premier neural AI solutions architect.
+                </p>
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Start Your Neural Transformation
+                </a>
+
+                <!-- Stats Section -->
+                <div class="stats">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Neural Projects Deployed</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Neural Success Rate</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years Neural Evolution</div>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Neural Support Active</div>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                 <p>&copy; 2024 NeuraNest AI Agency | Khalid Rind - Lead AI Consultant | Melbourne, Australia</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-badge">Neural Architect</div>
+                <h2 class="section-title">Digital Neural Orchestrator</h2>
+                <p class="section-subtitle">
+                    Leading Melbourne's neural AI revolution with human-centric solutions and strategic innovation
+                </p>
             </div>
+            <div class="about-content">
+                <div class="profile-card" data-aos="fade-right">
+                    <div class="profile-image">👸🦀</div>
+                    <h3 class="profile-name">Khalid Rind</h3>
+                    <p class="profile-title">Lead Neural AI Consultant at NeuraNest AI Agency</p>
+                    <a href="https://www.linkedin.com/in/khalidrind" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-linkedin"></i>
+                        Neural Network Connect
+                    </a>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3>Transforming Businesses with Neural Intelligence</h3>
+                    <p>
+                        I am a dedicated Neural AI Consultant at NeuraNest AI Agency – Melbourne's leading provider of 
+                        comprehensive neural AI and digital solutions. My mission is to empower businesses from startups 
+                        to established brands to thrive in the neural era by integrating cutting-edge AI automation.
+                    </p>
+                    <p>
+                        Leveraging advanced neural AI agents (my digital co-creators!), I specialize in designing and 
+                        deploying custom neural solutions that solve real-world business challenges.
+                    </p>
+                    <p>
+                        <strong>My Neural Expertise Network:</strong><br>
+                        ⚕ Neural AI Automation & Custom App Development<br>
+                        ⚕ High-Converting Websites & Neural Landing Pages<br>
+                        ⚕ Google Business Neural Optimization<br>
+                        ⚵ End-to-End Neural Content Creation & Strategy<br>
+                        ⚵ Omnichannel Neural Digital Marketing<br>
+                        ⚵ E-commerce Neural Platform Mastery
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge">Neural Connection</div>
+                    <h2 class="section-title">Ready to Transform Your Neural Business?</h2>
+                    <p class="section-subtitle">
+                        Let's build intelligent neural solutions together that drive growth and secure your digital neural future
+                    </p>
+                </div>
+                <a href="mailto:contact@neuranestai.agency" class="btn btn-primary" style="font-size: 1.4rem; padding: 2rem 4rem;">
+                    <i class="fas fa-rocket"></i>
+                    Get Your Free Neural Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>NeuraNest AI Agency</p>
+            <p>Empowering businesses with cutting-edge neural AI automation, strategic digital marketing, and compelling content creation.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/khalidrind" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/neuranest-enterprise/K-RIND-PORTFOLIO" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="http://localhost:5174/" target="_blank" class="social-link">
+                    <i class="fas fa-desktop"></i>
+                </a>
+            </div>
+            <p>&copy; 2024 NeuraNest AI Agency. All neural rights reserved. | Khalid Rind - Lead Neural AI Consultant</p>
         </div>
     </footer>
 
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS (Animate on Scroll)
-        AOS.init({
-            duration: 800,
-            once: true,
-            offset: 50
-        });
-
-        // Mobile Menu Toggle
-        const mobileToggle = document.getElementById('mobileToggle');
-        const navMenu = document.getElementById('navMenu');
-
-        mobileToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            mobileToggle.querySelector('i').classList.toggle('fa-bars');
-            mobileToggle.querySelector('i').classList.toggle('fa-times');
-        });
-        
-        // Active Navigation Highlighting on Scroll
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 80) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
-                }
-            });
-             // Close mobile menu when a link is clicked
-            if (navMenu.classList.contains('active')) {
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        navMenu.classList.remove('active');
-                        mobileToggle.querySelector('i').classList.add('fa-bars');
-                        mobileToggle.querySelector('i').classList.remove('fa-times');
-                    });
-                });
-            }
-        });
+        AOS.init({ duration: 1000, easing: 'ease-out-cubic', once: true, offset: 50 });
     </script>
 </body>
 </html>
