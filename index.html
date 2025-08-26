@@ -1,61 +1,951 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Khalid Rind | NeuraNest AI Agency - Premier AI Consultant & Digital Transformation Expert</title>
-    <meta name="description" content="Portfolio of Khalid Rind, Lead AI Consultant at NeuraNest AI Agency in Melbourne. Specializing in AI automation, digital transformation, high-converting websites, and strategic content creation.">
-    <meta name="keywords" content="AI Consultant, Digital Transformation, Khalid Rind, NeuraNest AI, Melbourne, AI Automation, Web Development, E-commerce Growth, Content Strategy">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalid Rind | NeuraNest AI Agency - Premier AI Consultant & Portfolio Showcase</title>
+    <meta name="description" content="Comprehensive portfolio of Khalid Rind, Lead AI Consultant at NeuraNest AI Agency. Showcasing AR/VR educational modules, property management systems, AI applications, and cutting-edge digital solutions.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- Animate on Scroll (AOS) Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
     <style>
-      /* Custom Keyframe Animations for SVG elements */
-      @keyframes pulse_nest { 0%, 100% { stroke-opacity: 0.7; } 50% { stroke-opacity: 1; } }
-      @keyframes pulse_neuron { 0%, 100% { filter: drop-shadow(0 0 2px #00D4AA); } 50% { filter: drop-shadow(0 0 8px #00D4AA); } }
+        :root {
+            --primary: #007BFF;
+            --secondary: #00D4AA;
+            --accent: #FF6B35;
+            --purple: #A77EFF;
+            --cyan: #00F6FF;
+            --dark-bg: #0A0A10;
+            --dark-surface: #12121A;
+            --slate-800: #1E293B;
+            --text-primary: #FFFFFF;
+            --text-secondary: #A0A0B0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-hero: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
+            --shadow-glow: 0 0 35px rgba(0, 123, 255, 0.35);
+            --shadow-cyan: 0 0 35px rgba(0, 246, 255, 0.35);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0A0A10 0%, #12121A 50%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
 
-      /* Custom Tailwind Config (since we can't use a config file) */
-      /* This is mostly for documentation, the values are used directly in classes */
-      .tailwind-config {
-        --primary: #007BFF;
-        --secondary: #00D4AA;
-        --accent: #FF6B35;
-        --dark-bg: #0A0A10;
-        --dark-surface: #12121A;
-        --text-primary: #FFFFFF;
-        --text-secondary: #A0A0B0;
-        --border-color: rgba(255, 255, 255, 0.1);
-      }
+        /* Enhanced Header */
+        header {
+            position: fixed; top: 0; left: 0; width: 100%;
+            background: rgba(10, 10, 16, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+        .nav-container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            height: 80px; 
+        }
+        .logo { 
+            display: flex; 
+            align-items: center; 
+            gap: 1rem; 
+            text-decoration: none; 
+        }
+        .logo-svg { width: 50px; height: 50px; }
+        .logo-text { 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: 1.75rem; 
+            font-weight: 800; 
+            background: var(--gradient-hero);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        nav ul { 
+            display: flex; 
+            list-style: none; 
+            gap: 3rem; 
+        }
+        nav a { 
+            color: var(--text-secondary); 
+            text-decoration: none; 
+            font-weight: 600; 
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        nav a:hover, nav a.active { 
+            color: var(--cyan);
+            text-shadow: 0 0 10px var(--cyan);
+        }
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-hero);
+        }
+
+        /* Enhanced Hero Section */
+        .hero { 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            padding-top: 80px; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(0, 246, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(167, 126, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .hero-content { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            align-items: center; 
+            gap: 4rem; 
+            position: relative; 
+            z-index: 2; 
+        }
+        .hero-text .badge { 
+            display: inline-block; 
+            padding: 0.75rem 1.5rem; 
+            border: 2px solid var(--cyan); 
+            color: var(--cyan); 
+            border-radius: 50px; 
+            font-size: 1rem; 
+            font-weight: 600;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(0, 246, 255, 0.3);
+        }
+        .hero-text h1 { 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: clamp(3rem, 8vw, 5.5rem); 
+            line-height: 1.1; 
+            font-weight: 800; 
+            margin-bottom: 2rem; 
+        }
+        .hero-text h1 .highlight { 
+            background: var(--gradient-hero); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+        .hero-text h1 .orchestrator {
+            display: block;
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-top: 0.5rem;
+        }
+        .hero-text .subtitle { 
+            font-size: 1.3rem; 
+            color: var(--text-secondary); 
+            margin-bottom: 3rem; 
+            max-width: 600px; 
+            line-height: 1.7;
+        }
+        .hero-cta {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .btn { 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 0.75rem; 
+            padding: 1.25rem 2.5rem; 
+            border: none; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            font-size: 1.1rem;
+            text-decoration: none; 
+            transition: all 0.4s ease; 
+            position: relative;
+        }
+        .btn-primary { 
+            background: var(--gradient-hero); 
+            color: white;
+            box-shadow: var(--shadow-cyan);
+        }
+        .btn-primary:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 0 50px rgba(0, 246, 255, 0.5);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+        .btn-secondary:hover {
+            border-color: var(--purple);
+            color: var(--purple);
+            box-shadow: 0 0 30px rgba(167, 126, 255, 0.3);
+        }
+
+        /* Enhanced Quantum Orb */
+        .quantum-orb-container { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            position: relative;
+        }
+        #quantumOrb {
+            max-width: 500px;
+            filter: drop-shadow(0 0 30px rgba(0, 246, 255, 0.4));
+        }
+
+        /* Section Styling */
+        section { padding: 8rem 0; }
+        .section-header { text-align: center; margin-bottom: 5rem; }
+        .section-badge { 
+            display: inline-block; 
+            background: rgba(0, 246, 255, 0.1); 
+            color: var(--cyan); 
+            padding: 0.75rem 1.5rem; 
+            border-radius: 50px; 
+            font-size: 1rem; 
+            font-weight: 700; 
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(0, 246, 255, 0.3);
+        }
+        .section-title { 
+            font-family: 'Space Grotesk', sans-serif; 
+            font-size: clamp(2.5rem, 6vw, 4rem); 
+            font-weight: 800; 
+            margin-bottom: 1.5rem; 
+        }
+        .section-subtitle { 
+            font-size: 1.2rem; 
+            color: var(--text-secondary); 
+            max-width: 700px; 
+            margin: 0 auto; 
+            line-height: 1.7;
+        }
+
+        /* Enhanced Portfolio Section */
+        .portfolio { background: var(--dark-surface); }
+        .portfolio-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        .showcase-item {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, var(--slate-800) 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .showcase-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-hero);
+        }
+        .showcase-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-cyan);
+            border-color: var(--cyan);
+        }
+        .showcase-icon {
+            font-size: 3rem;
+            color: var(--cyan);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 20px var(--cyan);
+        }
+        .showcase-item h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .showcase-item p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .showcase-stats {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--cyan);
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Media Gallery */
+        .media-gallery {
+            margin: 5rem 0;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .media-item {
+            background: var(--dark-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        .media-item:hover {
+            transform: scale(1.02);
+            border-color: var(--cyan);
+            box-shadow: var(--shadow-cyan);
+        }
+        .media-preview {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, var(--dark-surface), var(--slate-800));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--cyan);
+        }
+        .media-content {
+            padding: 1.5rem;
+        }
+        .media-tag {
+            display: inline-block;
+            background: rgba(167, 126, 255, 0.1);
+            color: var(--purple);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Technologies Section */
+        .technologies {
+            background: var(--dark-bg);
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .tech-category {
+            background: var(--dark-surface);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        .tech-category h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--cyan);
+        }
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        .tech-tag {
+            background: rgba(0, 123, 255, 0.1);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        /* Enhanced Footer */
+        footer { 
+            background: #000; 
+            padding: 5rem 0 3rem; 
+            text-align: center; 
+            border-top: 1px solid var(--border-color);
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+        .footer-section h4 {
+            color: var(--cyan);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .footer-section p, .footer-section a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+        .footer-section a:hover {
+            color: var(--cyan);
+        }
+        .social-links { 
+            display: flex; 
+            justify-content: center; 
+            gap: 2rem; 
+            margin-bottom: 3rem; 
+        }
+        .social-links a { 
+            color: var(--text-secondary); 
+            font-size: 2rem; 
+            transition: all 0.3s ease; 
+        }
+        .social-links a:hover { 
+            color: var(--cyan); 
+            text-shadow: 0 0 15px var(--cyan);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-content { grid-template-columns: 1fr; text-align: center; }
+            .quantum-orb-container { margin-top: 3rem; }
+        }
+        @media (max-width: 768px) {
+            section { padding: 5rem 0; }
+            .hero-cta { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
+            nav ul { display: none; }
+            .footer-content { grid-template-columns: 1fr; text-align: center; }
+        }
+
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotate1 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes rotate2 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+        @keyframes rotate3 { 
+            0%, 100% { rx: 80; ry: 180; transform: rotate(0deg); } 
+            50% { rx: 180; ry: 80; transform: rotate(180deg); } 
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
     </style>
-
-
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.1.1/",
-    "react": "https://esm.sh/react@^19.1.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-C2DAnwG4.js"></script>
 </head>
-  <body class="bg-[#0A0A10] text-white font-inter overflow-x-hidden">
-    <div id="root"></div>
-  </body>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <a href="#home" class="logo">
+                    <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 75C25 83.2843 45.1472 90 70 90C94.8528 90 115 83.2843 115 75" stroke="url(#paint0_linear)" stroke-width="5" style="transform: scale(0.8) translate(-12px, -8px); animation: pulse 4s infinite ease-in-out;"/>
+                        <path d="M25 68C25 76.2843 45.1472 83 70 83C94.8528 83 115 76.2843 115 68" stroke="url(#paint1_linear)" stroke-width="5" style="transform: scale(0.8) translate(-12px, -8px); animation: pulse 4s infinite ease-in-out 0.2s;"/>
+                        <circle cx="50" cy="50" r="20" fill="url(#paint2_radial)" />
+                        <path d="M50 30 V10 L45 15 M50 10 L55 15 M50 20 L40 10 M50 20 L60 10 M45 15 L40 25 M55 15 L60 25" stroke="#00F6FF" stroke-width="2" stroke-linecap="round" style="filter: drop-shadow(0 0 8px #00F6FF); animation: pulse 2s infinite alternate;" />
+                        <defs>
+                            <linearGradient id="paint0_linear" x1="70" y1="75" x2="70" y2="90" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00F6FF"/>
+                                <stop offset="1" stop-color="#A77EFF"/>
+                            </linearGradient>
+                            <linearGradient id="paint1_linear" x1="70" y1="68" x2="70" y2="83" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00F6FF"/>
+                                <stop offset="1" stop-color="#A77EFF"/>
+                            </linearGradient>
+                            <radialGradient id="paint2_radial" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#00F6FF" stop-opacity="0.8"/>
+                                <stop offset="100%" stop-color="#A77EFF" stop-opacity="0.9"/>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                    <span class="logo-text">NeuraNest</span>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#technologies">Tech Stack</a></li>
+                        <li><a href="#media">Showcase</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text" data-aos="fade-right">
+                        <div class="badge">AI Consultant & Digital Transformation Expert</div>
+                        <h1>
+                            Khalid Rind
+                            <span class="highlight orchestrator">The Digital Orchestrator</span>
+                        </h1>
+                        <p class="subtitle">
+                            Empowering Melbourne businesses with cutting-edge AI automation, AR/VR educational platforms, property management systems, and strategic digital solutions that drive real-world growth and innovation.
+                        </p>
+                        <div class="hero-cta">
+                            <a href="#contact" class="btn btn-primary">
+                                <i class="fas fa-rocket"></i> Start Your Transformation
+                            </a>
+                            <a href="#portfolio" class="btn btn-secondary">
+                                <i class="fas fa-play"></i> View Portfolio
+                            </a>
+                        </div>
+                    </div>
+                    <div class="quantum-orb-container" data-aos="fade-left">
+                        <svg id="quantumOrb" width="100%" height="100%" viewBox="0 0 400 400">
+                            <defs>
+                                <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                                    <stop offset="0%" style="stop-color:rgb(255,255,255);stop-opacity:1" />
+                                    <stop offset="50%" style="stop-color:rgb(0,246,255);stop-opacity:0.8" />
+                                    <stop offset="100%" style="stop-color:rgb(167,126,255);stop-opacity:1" />
+                                </radialGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+                                    <feMerge>
+                                        <feMergeNode in="coloredBlur"/>
+                                        <feMergeNode in="SourceGraphic"/>
+                                    </feMerge>
+                                </filter>
+                            </defs>
+                            <circle cx="200" cy="200" r="40" fill="url(#coreGlow)" filter="url(#glow)" />
+                            <ellipse cx="200" cy="200" rx="150" ry="60" stroke="#00F6FF" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate1 10s linear infinite;" />
+                            <ellipse cx="200" cy="200" rx="120" ry="120" stroke="#A77EFF" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate2 12s linear infinite;" />
+                            <ellipse cx="200" cy="200" rx="80" ry="180" stroke="#007BFF" fill="none" stroke-width="2" style="transform-origin: center; animation: rotate3 15s ease-in-out infinite;" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge">Portfolio Showcase</div>
+                    <h2 class="section-title">Innovation in Action</h2>
+                    <p class="section-subtitle">
+                        A comprehensive showcase of cutting-edge projects spanning AI development, AR/VR education, property management systems, and digital transformation solutions.
+                    </p>
+                </div>
+
+                <div class="portfolio-showcase">
+                    <!-- M&N Accommodation Platform -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-building showcase-icon"></i>
+                        <h3>M&N Accommodation Platform</h3>
+                        <p>Premium property management system with advanced booking capabilities, Google Business API integration, and comprehensive tenant management. Built with React and modern web technologies.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Properties</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">React</span>
+                                <span class="stat-label">Technology</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View Details
+                        </a>
+                    </div>
+
+                    <!-- AR/VR Educational Modules -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-vr-cardboard showcase-icon"></i>
+                        <h3>AR/VR Educational Platform</h3>
+                        <p>Immersive educational experiences featuring interactive AR overlays for historical sites, anatomical 3D models, and space exploration modules. Revolutionary learning through technology.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">12+</span>
+                                <span class="stat-label">Modules</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">AR/VR</span>
+                                <span class="stat-label">Platform</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-play"></i> Experience Demo
+                        </a>
+                    </div>
+
+                    <!-- AI Studio Integrations -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-robot showcase-icon"></i>
+                        <h3>Google AI Studio Integrations</h3>
+                        <p>Advanced AI workflows including the NeuraNest Launch Kit Generator, automated content creation systems, and intelligent business process automation using cutting-edge AI technology.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">8+</span>
+                                <span class="stat-label">AI Tools</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">Gemini</span>
+                                <span class="stat-label">AI Model</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-cogs"></i> See Integration
+                        </a>
+                    </div>
+
+                    <!-- Video Production Suite -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-video showcase-icon"></i>
+                        <h3>Educational Video Suite</h3>
+                        <p>Professional video production including NeuraNest explainer videos, educational content, and brand storytelling. High-quality visual content that engages and educates.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Videos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">4K</span>
+                                <span class="stat-label">Quality</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-film"></i> Watch Videos
+                        </a>
+                    </div>
+
+                    <!-- Web Development Portfolio -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-code showcase-icon"></i>
+                        <h3>Web Development Portfolio</h3>
+                        <p>30+ high-converting landing pages, responsive web applications, and e-commerce solutions. Modern, fast, and optimized for maximum user engagement and conversion.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Websites</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Speed Score</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Sites
+                        </a>
+                    </div>
+
+                    <!-- Mobile Applications -->
+                    <div class="showcase-item" data-aos="fade-up" data-aos-delay="600">
+                        <i class="fas fa-mobile-alt showcase-icon"></i>
+                        <h3>Mobile App Development</h3>
+                        <p>Cross-platform mobile applications including the Unified AI Dashboard and AR Educator app. Built with React Native for seamless iOS and Android experiences.</p>
+                        <div class="showcase-stats">
+                            <div class="stat">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Apps</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">React Native</span>
+                                <span class="stat-label">Framework</span>
+                            </div>
+                        </div>
+                        <a href="#media" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Apps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technologies" class="technologies">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge">Technology Stack</div>
+                    <h2 class="section-title">Cutting-Edge Tools</h2>
+                    <p class="section-subtitle">
+                        Leveraging the latest technologies and frameworks to build scalable, efficient, and innovative solutions.
+                    </p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="100">
+                        <h4><i class="fas fa-brain"></i> AI & Machine Learning</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">Google AI Studio</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">OpenAI</span>
+                            <span class="tech-tag">Claude AI</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="200">
+                        <h4><i class="fab fa-react"></i> Frontend Development</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">Framer Motion</span>
+                            <span class="tech-tag">TypeScript</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="300">
+                        <h4><i class="fas fa-mobile-alt"></i> Mobile Development</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Expo</span>
+                            <span class="tech-tag">iOS</span>
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Cross-Platform</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category" data-aos="fade-up" data-aos-delay="400">
+                        <h4><i class="fas fa-cube"></i> AR/VR Development</h4>
+                        <div class="tech-list">
+                            <span class="tech-tag">WebXR</span>
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">A-Frame</span>
+                            <span class="tech-tag">Unity</span>
+                            <span class="tech-tag">ARCore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="media" class="media-gallery">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge">Media Showcase</div>
+                    <h2 class="section-title">Visual Portfolio</h2>
+                    <p class="section-subtitle">
+                        Explore screenshots, videos, and visual content from our projects showcasing the quality and innovation of our work.
+                    </p>
+                </div>
+
+                <div class="media-grid">
+                    <!-- Video Content -->
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="media-preview">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">Video</span>
+                            <h4>NeuraNest Explainer Video</h4>
+                            <p>Professional brand video showcasing AI capabilities and services</p>
+                        </div>
+                    </div>
+
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="media-preview">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">Educational</span>
+                            <h4>AR Educational Modules</h4>
+                            <p>Interactive 3D educational content and AR learning experiences</p>
+                        </div>
+                    </div>
+
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="media-preview">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">Property Tech</span>
+                            <h4>M&N Platform Screenshots</h4>
+                            <p>User interface and dashboard screenshots from the property management system</p>
+                        </div>
+                    </div>
+
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="media-preview">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">AI Tools</span>
+                            <h4>Launch Kit Generator</h4>
+                            <p>AI-powered business launch kit generation tool interface</p>
+                        </div>
+                    </div>
+
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="media-preview">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">Web Design</span>
+                            <h4>Landing Page Collection</h4>
+                            <p>High-converting landing pages and website designs</p>
+                        </div>
+                    </div>
+
+                    <div class="media-item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="media-preview">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="media-content">
+                            <span class="media-tag">Analytics</span>
+                            <h4>Performance Metrics</h4>
+                            <p>Project success metrics and performance analytics</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="hero">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <div class="section-badge">Get In Touch</div>
+                    <h2 class="section-title">Ready to Transform Your Business?</h2>
+                    <p class="section-subtitle">
+                        Let's discuss how we can leverage AI, AR/VR, and cutting-edge technology to elevate your business to new heights. Get a complimentary consultation today.
+                    </p>
+                    <div style="margin-top: 3rem;">
+                        <a href="mailto:contact@neuranest-ai.agency" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get Free Consultation
+                        </a>
+                        <a href="https://www.linkedin.com/in/khalidrind" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>NeuraNest AI Agency</h4>
+                    <p>Leading AI consultation and digital transformation services in Melbourne, Australia.</p>
+                    <p>Specializing in AR/VR education, property management systems, and intelligent automation.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <a href="#portfolio">AI Development</a><br>
+                    <a href="#portfolio">AR/VR Solutions</a><br>
+                    <a href="#portfolio">Web Development</a><br>
+                    <a href="#portfolio">Mobile Apps</a><br>
+                    <a href="#portfolio">Digital Strategy</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Melbourne, Australia</p>
+                    <p>contact@neuranest-ai.agency</p>
+                    <p>LinkedIn: /in/khalidrind</p>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/khalidrind" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/neuranestai" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:contact@neuranest-ai.agency" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            
+            <div style="border-top: 1px solid var(--border-color); padding-top: 2rem; margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                <p>&copy; 2024 NeuraNest AI Agency | Khalid Rind - Lead AI Consultant | Melbourne, Australia</p>
+                <p style="margin-top: 1rem;">🧠 Generated with Claude Code - Comprehensive Portfolio Showcase</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add loading animation for showcase items
+        const showcaseItems = document.querySelectorAll('.showcase-item');
+        showcaseItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced quantum orb interaction
+        const quantumOrb = document.getElementById('quantumOrb');
+        if (quantumOrb) {
+            quantumOrb.addEventListener('mouseenter', function() {
+                this.style.filter = 'drop-shadow(0 0 50px rgba(0, 246, 255, 0.7))';
+            });
+            
+            quantumOrb.addEventListener('mouseleave', function() {
+                this.style.filter = 'drop-shadow(0 0 30px rgba(0, 246, 255, 0.4))';
+            });
+        }
+    </script>
+</body>
 </html>
